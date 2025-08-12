@@ -41,6 +41,7 @@ public class MainSecurity {
                         .requestMatchers("/api/beds/**").hasAnyRole("SECRETARIA", "ENFERMERA")
                         .requestMatchers("/api/patients/**").hasRole("ENFERMERA")
                         .requestMatchers(HttpMethod.POST,"/api/auth/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/auth").permitAll()
                         .requestMatchers(
                                 SWAGGER_URLS
                         ).permitAll()

@@ -28,7 +28,7 @@ public class Bed {
     @Pattern(regexp = "^CAMA-\\d{2}$", message = "El formato del identificador debe ser CAMA-XX (ej: CAMA-01)")
     private String identifier;
 
-    @Column(name = "is_occupied", nullable = false)
+    @Column(name = "is_occupied", nullable = false, columnDefinition = "TINYINT(1)")
     private Boolean isOccupied = false;
 
     @ManyToOne
